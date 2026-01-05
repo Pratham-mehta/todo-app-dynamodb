@@ -51,12 +51,12 @@ export default async function handler(req, res) {
 
     // PUT /api/tasks/:id - Update task
     if (req.method === 'PUT') {
-      const { task, status, priority, dueDate } = req.body;
+      const { task, status, priority, dueDate, comments } = req.body;
 
       const params = {
         TableName: TABLE_NAME,
         Key: { id },
-        UpdateExpression: 'set #task = :task, #status = :status, priority = :priority, dueDate = :dueDate, updatedAt = :updatedAt',
+        UpdateExpression: 'set #task = :task, #status = :status, priority = :priority, dueDate = :dueDate, comments = :comments, updatedAt = :updatedAt',
         ExpressionAttributeNames: {
           '#task': 'task',
           '#status': 'status'
@@ -66,6 +66,7 @@ export default async function handler(req, res) {
           ':status': status,
           ':priority': priority,
           ':dueDate': dueDate,
+          ':comments': comments || '',
           ':updatedAt': new Date().toISOString()
         },
         ReturnValues: 'ALL_NEW'

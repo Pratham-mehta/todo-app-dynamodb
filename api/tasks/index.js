@@ -36,7 +36,7 @@ export default async function handler(req, res) {
 
     // POST /api/tasks - Create new task
     if (req.method === 'POST') {
-      const { task, status, priority, dueDate } = req.body;
+      const { task, status, priority, dueDate, comments } = req.body;
 
       if (!task) {
         return res.status(400).json({ error: 'Task description is required' });
@@ -48,6 +48,7 @@ export default async function handler(req, res) {
         status: status || 'Not Started',
         priority: priority || 'Medium',
         dueDate: dueDate || '',
+        comments: comments || '',
         createdAt: new Date().toISOString()
       };
 
