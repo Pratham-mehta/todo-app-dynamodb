@@ -2,6 +2,8 @@
 
 A modern, full-stack todo application built with React and AWS DynamoDB. This application provides a spreadsheet-like interface for managing tasks with real-time persistence to AWS DynamoDB.
 
+🚀 **Live Demo:** Deploying to Vercel...
+
 ## Features
 
 - Spreadsheet-style task management interface
