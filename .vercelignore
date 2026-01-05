@@ -1,0 +1,8 @@
+node_modules
+.env
+.env.local
+.env.production
+server
+scripts
+*.log
+.DS_Store

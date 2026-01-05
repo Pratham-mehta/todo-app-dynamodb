@@ -1,0 +1,39 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Documentation files (except README)
+AWS_DEPLOYMENT.md
+DEPLOYMENT_CHECKLIST.md
+DEPLOY_QUICK_START.md
+PROJECT_SUMMARY.md
+QUICKSTART.md
+START_HERE.md
+VERCEL_CONVERSION_SUMMARY.md
+VERCEL_DEPLOYMENT.md
